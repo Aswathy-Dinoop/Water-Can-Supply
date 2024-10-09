@@ -1,0 +1,76 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="banner_area1 clearfix">
+    <!-- <div class="slider_overlay_area slider_height"> -->
+        <div class="container slider_height">
+            <!-- <div class="row slider_height"> -->
+                <!-- <div class="col-md-5 offset-md-7 slider_height"> -->
+                    <div class="banner-delivery-form">
+                        <div class="form-header text-center">
+                            <h2>Add Products</h2>
+                        </div>
+                        <form action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <!-- <div class="icon"><span class="fa fa-chevron-down"></span></div> -->
+                                    <select id="dept" name="companyname" class="theme-input-style">
+                                      <option selected>Choose Water Company</option>
+                                      {% for i in name %}
+                                      
+                                      <option value="{{i.id}}">{{i.companyname}} </option>
+                                  {% endfor %}
+                                  </select>
+                                    <!-- <input type="text" placeholder="Company Name" name="name" required class="theme-input-style"> -->
+                                </div>
+                                <div class="col-lg-4">
+                                    <!-- <input type="text" placeholder="Enter Bottle Size" name="email" required class="theme-input-style"> -->
+                                    <select id="size" name="size" class="theme-input-style">
+                                        <option value="" disabled selected>Choose Bottle Size</option>
+                                        <option value="500 ML">500 ML</option>
+                                        <option value="1 Litre">1 Litre </option>
+                                        <option value="2 Litre">2 Litre </option>
+                                        <option value="5 Litre">5 Litre </option>
+                                        <option value="10 Litre">10 Litre </option>
+                                        <option value="20 Litre">20 Litre </option>
+
+                                    </select>
+                                    
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" placeholder="Price" name="price" class="theme-input-style">
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="number" placeholder="Total Quantity" name="qty" class="theme-input-style">
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="file" name="image" class="theme-input-style">
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            
+                            
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-btn">
+                                        <button class="btn" type="submit">Update</button>
+                                    </div>
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                        </form><!-- /.form -->
+                    </div><!-- End of delivery form -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.overlay -->
+   <br>
+    
+{% endblock %}

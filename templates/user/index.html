@@ -1,0 +1,42 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- home banner area -->
+    <div class="banner-area-inner">
+        <div class="banner-inner-area banner-area1">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-10">
+                        <!-- banner text -->
+                        <div class="banner-text-wrap text-center">
+                            <span class="schoolbell"  data-animate="fadeInUp" data-delay=".4">Water is nothing, but life</span>
+                            <h1  data-animate="fadeInUp" data-delay=".55">Great taste that's fresh <br>& consistent.</h1>
+                            <a href="#" class="btn"  data-animate="fadeInUp" data-delay=".7">User Page</a>
+                        </div>
+                        <!-- End of banner text -->
+                        <div class="banner-image"  data-trigger="parallax_layers">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="{% static 'assets/img/banner/img1.jpg' %}" alt="" class="bottle">
+                                    <div class="figure-caption">
+                                        <div class="image-sell-offer">
+                                            <h5><span>Free</span> Delivery</h5>
+                                        </div>
+                                    </div>
+                                    <div class="banner-image-wrap">
+                                        <img src="{% static 'assets/img/banner/ice.jpg' %}" alt="" class="ice2" data-depth="0.3">
+                                        <img src="{% static 'assets/img/banner/ice.jpg' %}" alt="" class="ice1" data-depth="0.3">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of home banner area -->
+
+  
+   {% endblock %}

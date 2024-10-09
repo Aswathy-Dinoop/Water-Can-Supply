@@ -1,0 +1,130 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% block content %}
+{% if message %}
+<script>
+alert("{{ message }}")
+</script>
+{% endif %}
+<div class="page-title-wrap primary-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- page title content -->
+                <div class="page-title-content text-center">
+                    <ul class="mb-0 list-unstyle nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Orders</a></li>
+                    </ul>
+                    <h1 class="h2">View My Orders</h1>
+                </div><!--/. End of page title content -->
+            </div><!--/.col-->
+        </div><!--/.row-->
+    </div><!--/.container-->
+</div><!-- /.End of page title -->
+
+    
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <form class="col-md-12" method="post">
+            <div class="site-blocks-table">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th class="product-thumbnail">Image</th>
+                    <th class="product-name">Product</th>
+                    <th class="product-quantity">Quantity</th>
+                    <th class="product-total">Total</th>
+                    <th class="product-remove">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in cart %}
+                  <tr>
+                    
+                    <td class="product-thumbnail">
+                      <img width="150px" height="150px"  src="{{ i.products.image.url}}">
+                    </td>
+                    <td class="product-name">
+                      <h2 class="h5 text-black">{{i.products.companyname.companyname}}</h2>
+                    </td>
+                
+                    <td>{{i.quantity}}</td>
+                    <td>{{i.price}}</td>
+                    <td><a href="Remove?id={{i.id}}&id2={{i.products_id}}" class="btn btn-primary height-auto btn-sm">X</a></td>
+                    
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </div>
+    
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row mb-5">
+              <!-- <div class="col-md-6 mb-3 mb-md-0">
+                <button class="btn btn-primary btn-md btn-block">Update Cart</button> 
+              </div> -->
+              <div class="col-md-6 mb-3 mb-md-0">
+                <button class="btn btn-outline-primary btn-md btn-block"><a href="shops"> Continue Shopping</a></button>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-md-12">
+                <label class="text-black h4" for="coupon">Coupon</label>
+                <p>Enter your coupon code if you have one.</p>
+              </div>
+              <div class="col-md-8 mb-3 mb-md-0">
+                <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code">
+              </div>
+              <div class="col-md-4">
+                <button class="btn btn-primary btn-md px-4">Apply Coupon</button>
+              </div>
+            </div> -->
+          </div>
+          <div class="col-md-6 pl-5">
+            <div class="row justify-content-end">
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-12 text-right border-bottom mb-5">
+                    <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <span class="text-black">Subtotal</span>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <strong class="text-black">₹ {{totalvalue}}</strong>
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="col-md-6">
+                    <span class="text-black">Total</span>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <strong class="text-black">₹ {{totalvalue}}</strong>
+                  </div>
+                </div>
+    
+                <div class="row">
+                  <div class="col-md-12">
+                  <button class="btn btn-primary btn-lg btn-block" onclick="window.location='checkout'">Proceed To Pay                      </button>
+                  </div>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+
+{% endblock %}

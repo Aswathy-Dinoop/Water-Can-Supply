@@ -1,0 +1,52 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+{% block content %}
+<section class="pt-90 pb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <!-- section title -->
+                <div class="section-title text-center">
+                    <br>
+                    <br>
+                    <!-- <span class="schoolbell">Contact Us</span> -->
+                    <h2>Add company Details</h2>
+                </div>
+                <!-- End of section title -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                <!-- contact form -->
+                <div class="contact-form contact-page-form ">
+                    <form action="" class="contact-form-validated" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row">
+                            
+                            <div class="col-md-12">
+                                <label for="name">Company Name*:</label>
+                                <input type="text" name="companyname" placeholder="Company Name" class="theme-input-style" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="name">Upload Your Company Logo*:</label>
+                                <input type="file" name="image"  class="theme-input-style" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                                <div class="submite-btn text-center">
+                                    <button type="submit" class="btn">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--/.form-->
+                </div>
+                </div>
+                </div>
+                </div>
+                </section>
+
+ {% endblock %}

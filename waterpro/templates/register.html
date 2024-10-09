@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if message %}
+<script>
+alert("{{ message }}")
+</script>
+{% endif %}
+
+<div class="banner_area1 clearfix">
+    <!-- <div class="slider_overlay_area slider_height"> -->
+        <div class="container slider_height">
+            <!-- <div class="row slider_height"> -->
+                <!-- <div class="col-md-5 offset-md-7 slider_height"> -->
+                    <div class="banner-delivery-form">
+                        <div class="form-header text-center">
+                            <h2>Registration Form</h2>
+                        </div>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" placeholder="Name" name="name" required class="theme-input-style">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" placeholder="Email" name="email" required class="theme-input-style">
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="number" placeholder="Contact Number" name="phone" class="theme-input-style">
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" placeholder="Address" name="address" class="theme-input-style">
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" placeholder="District" name="district" class="theme-input-style">
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="password" placeholder="Enter Password" name="password" class="theme-input-style">
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-btn">
+                                        <button class="btn" type="submit">Signup Now</button>
+                                    </div>
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                        </form><!-- /.form -->
+                    </div><!-- End of delivery form -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.overlay -->
+   <br>
+    
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- page title -->
+    <div class="page-title-wrap primary-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- page title content -->
+                    <div class="page-title-content text-center">
+                        <ul class="mb-0 list-unstyle nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Service</a></li>
+                        </ul>
+                        <h1 class="h2">Service Detail</h1>
+                    </div><!--/. End of page title content -->
+                </div><!--/.col-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!-- /.End of page title -->
+
+    <!-- our quality -->
+    <section class="pt-120 top-shape">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="border-container">
+                        <div class="row">
+                            
+                        </div>
+                        <!-- tab content -->
+                        <div class="tab-content bottle-tab-content pb-120">
+                            <div class="tab-pane fade show active" id="nav" role="tabpanel" aria-labelledby="nav-tab">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <!-- qulity bottle details -->
+                                        <div class="quality-bottle-details">
+                                            <div class="bottle-image">
+                                                <img src="{{view_pro.image.url}}" alt="">
+                                                <div class="image-sell-offer">
+                                                    <h5><span>Free</span> Delivery</h5>
+                            
+                                                </div>
+                                            </div>
+                                            <div class="bottle-price">
+                                                <ul class="d-flex list-unstyled mb-0">
+                                                    <li><a href="view_pro?id={{i.id}}">{{view_pro.companyname.companyname}}</a></li>
+                                                    <li><a href="view_pro?id={{i.id}}">Rs{{view_pro.price}}/-</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/.End of qulity bottle details -->
+                                    </div>
+                                    <!--/.col-->
+                                    <div class="col-md-7 col-lg-6 offset-lg-1">
+                                        <!-- our quality content -->
+                                        <div class="our-quality-inner bottle-detailes">
+                                            <h3><a href="view_pro?id={{i.id}}">{{view_pro.companyname.companyname}}</a></h3>
+                                            <p>There are many variations of passages of lorem ipsum available, but the majority have suffered
+                                                alteration in some form, by injected humour, or randomised words which don't look even slightly
+                                                believable.</p>
+                            
+                                            <!-- our quality feature -->
+                                            <div class="our-quality-feature media">
+                                                <div class="our-quality-left">
+                                                    <ul class="mb-0 list-unstyled">
+                                                        <li>
+                                                            <span>1</span>
+                                                            Calcium
+                                                        </li>
+                                                        <li>
+                                                            <span>2</span>
+                                                            Magnesium
+                                                        </li>
+                                                        <li>
+                                                            <span>3</span>
+                                                            Sodium
+                                                        </li>
+                                                        <li>
+                                                            <span>4</span>
+                                                            Potassium
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="our-quality-right">
+                                                    <ul class="mb-0 list-unstyled">
+                                                        <li>
+                                                            <span>5</span>
+                                                            Chloride
+                                                        </li>
+                                                        <li>
+                                                            <span>6</span>
+                                                            Nitrate
+                                                        </li>
+                                                        <li>
+                                                            <span>7</span>
+                                                            TDS
+                                                        </li>
+                                                        <li>
+                                                            <span>8</span>
+                                                            PH
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- our quality feature -->
+                            
+                                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                                                embarrassing
+                                                hidden in the middle of text.</p>
+                                            <!-- order btn -->
+                                            <form method='post' action="AddtoCart"  class="contact-form-validated">
+                                                {% csrf_token %}
+                                            <div class="order-btn">
+                                                <input type="number" id="quantity" name="quantity" min="1" max="20" required>
+                                                <input type="hidden" class="form-control text-center" name="id" value="{{view_pro.id}}" >
+
+                                                <input type="submit" value="Add to cart">                                                <!-- <a href="#" class="btn">Store Location</a> -->
+                                            </div><!-- /.End of order btn -->
+                                            </form>
+                                        </div><!-- /.our quality content -->
+                                    </div>
+                                    <!--/.col-->
+                                </div>
+                                <!--/.row-->
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </section>
+
+
+                 {% endblock %}

@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Document Title -->
+    <title>Water Can Supplyment</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+
+    <!-- CSS Files -->
+    <!--==== Google Fonts ====-->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600,700%7CSchoolbell" rel="stylesheet">
+    
+    <!--==== Bootstrap css file ====-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <!--==== Font-Awesome css file ====-->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+
+    <!-- Owl Carusel css file -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/owl-carousel/owl.carousel.min.css' %}">
+
+    <!-- camera css -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/camera/camera.min.css' %}">
+
+    <!-- ====video poppu css==== -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/Magnific-Popup/magnific-popup.css' %}">
+
+    <!--==== Style css file ====-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <!--==== Responsive css file ====-->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    <!--==== Custom css file ====-->
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <!-- <div class="preLoader">
+        <div class="preload-img">
+            <img src='{% static 'assets/img/preloader.gif' %}" alt="" class="pre-img">
+        </div>
+    </div> -->
+    <!-- End Of Preloader -->
+
+    <!-- Main header -->
+    <header class="header">
+        <!-- Start Header Navbar-->
+        <div class="main-header">
+            <div class="main-menu-wrap">
+                <div class="container-fluide">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{% static 'assets/img/logo.png' %}" data-rjs="2" alt="mineralo">
+                                </a>
+                            </div>
+                            <!-- End of Logo -->
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4 col-6 menu-button">
+                            <div class="menu--inner-area clearfix">
+                                <div class="menu-wraper">
+                                    <nav>
+                                        <!-- Header-menu -->
+                                        <div class="header-menu dosis">
+                                            <ul>
+                                                <li class="active"><a href="/admin">Home</a>
+                                                    <!-- <ul>
+                                                        <li class="active"><a href="index.html">Home v1</a></li>
+                                                        <li><a href="index-2.html">Home v2</a></li>
+                                                        <li><a href="index-3.html">Home v3</a></li>
+                                                    </ul> -->
+                                                </li>
+                                                <!-- <li><a href="add_products">Add Products</a></li> -->
+
+                                                <li><a href="#">Company<img src="{% static 'assets/img/line2.png' %}" alt=""></a>
+                                                    <ul>
+                                                        <li><a href="add_company">Add Companies</a></li>
+                                                        <li><a href="viewcompanies">View Companies</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Products <img src="{% static 'assets/img/line2.png' %}" alt=""></a>
+                                                    <ul>
+                                                        <li><a href="add_products">Add Products</a></li>
+                                                        <li><a href="viewproducts">View Products</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="view_users">Users Lists<img src="{% static 'assets/img/line2.png' %}" alt=""></a></li>
+                                                <li><a href="confirmorder">View Orders<img src="{% static 'assets/img/line2.png' %}" alt=""></a></li>
+
+                                            </ul>
+                                        </div>
+                                        <!-- End of Header-menu -->
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <!-- <div class="urgent-call text-right">
+                                <span><img src="{% static 'assets/img/icons/call.svg' %}" class="svg" alt=""></span><a href="#">666 888 0000</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Navbar-->
+    </header>
+    <!-- End of Main header -->
+    {% block content %}
+    {% endblock %}
+     <!-- footer -->
+     <footer class="footer secondery-bg">
+        <div class="footer-top pt-110 pb-70">
+            <div class="container">
+                <div class="row">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="footer-bottom-text">
+                <p>© Copyright 2024 by <a href="#">dishasoft.com</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+
+    <!-- back to top -->
+    <div class="back-to-top">
+        <a href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <!-- back to top -->
+
+
+    <!-- JS Files -->
+   <!-- ==== JQuery 3.3.1 js file==== -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+
+    <!-- ==== Bootstrap js file==== -->
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- ==== JQuery Waypoint js file==== -->
+    <script src="{% static 'assets/plugins/waypoints/jquery.waypoints.min.js' %}"></script>
+
+    <!-- ==== Parsley js file==== -->
+    <script src="{% static 'assets/plugins/parsley/parsley.min.js' %}"></script>
+
+    <!-- ==== Ratina js file==== -->
+    <script src="{% static 'assets/plugins/retinajs/retina.min.js' %}"></script>
+
+    <!-- ==== parallax js==== -->
+    <script src="{% static 'assets/plugins/parallax/parallax.js' %}"></script>
+
+    <!-- ==== Owl Carousel js file==== -->
+    <script src="{% static 'assets/plugins/owl-carousel/owl.carousel.min.js' %}"></script>
+
+    <!-- ==== Menu  js file==== -->
+    <script src="{% static 'assets/js/menu.min.js' %}"></script>
+
+    <!-- ===video popup=== -->
+    <script src="{% static 'assets/plugins/Magnific-Popup/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- ====Counter js file=== -->
+    <script src="{% static 'assets/plugins/waypoints/jquery.counterup.min.js' %}"></script>
+
+    <!-- cammera js -->
+    <script src="{% static 'assets/plugins/camera/camera.min.js' %}"></script>
+
+    <!-- easing js -->
+    <script src="{% static 'assets/js/easing.js' %}"></script>
+
+     <!--==== google map api key ====-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2D8wrWMY3XZnuHO6C31uq90JiuaFzGws"></script>
+
+    <!-- ==== Script js file==== -->
+    <script src="{% static 'assets/js/scripts.js' %}"></script>
+
+    <!-- ==== Custom js file==== -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+</html>

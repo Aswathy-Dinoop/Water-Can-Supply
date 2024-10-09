@@ -1,0 +1,56 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- bottole deliver -->
+<section class="pt-120 pb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <!-- section title -->
+                <div class="section-title text-center">
+                    <span class="schoolbell">Water Bottles</span>
+                    <h2>We Deliver Bottles</h2>
+                </div>
+                <!-- End of section title -->
+            </div>
+        </div>
+        <div class="row justify-content-center">
+        {% for i in products %}
+            
+            <div class="col-lg-4 col-md-6">
+               
+
+                <!-- single bottle deliver wrap -->
+               
+                <div class="single-bottle-inner text-center">
+                    
+                    
+                    <div class="bottle-image">
+                        
+                        <img style="width:250px; height: 250px;" src="{{i.image.url}}" alt="" class="svg">
+                    </div>
+                    <div class="single-bottle-text">
+                        <h4>{{i.companyname.companyname}}</h4>
+                        <p>{{i.size}}</p>
+                        <h5>Rs {{i.price}}</h5>
+                        <a href="single_product?id={{i.id}}"><i class="fa fa-arrow-circle-o-right"></i>Order</a>
+                    </div>
+                </div>
+                <!-- End of single bottle deliver wrap -->
+               
+             
+            </div>
+            
+           
+            <!-- <div class="col-12">
+                <div class="deliver-btn text-center">
+                    <a href="service.html" class="btn">View all Bottle</a>
+                </div>
+            </div> -->
+            {% endfor %} 
+        </div>
+    </div>
+</section>
+<!-- End of bottole deliver -->
+{% endblock %}
